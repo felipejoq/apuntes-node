@@ -5,10 +5,21 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src",
-    "dev": "node --watch ./src",
+    "dev": "nodemon ./src",
+    "dev:2": "nodemon ./src/index2.js",
+    "dev:3": "nodemon ./src/index3.js",
+    "dev:4": "nodemon ./src/index4.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "get-age": "^1.0.1",
+    "uuid": "^9.0.1"
+  }
 }
