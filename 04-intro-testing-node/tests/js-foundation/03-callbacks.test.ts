@@ -1,4 +1,5 @@
 import { getUserById } from "../../src/js-foundation/03-callbacks";
+import { describe, test, expect } from '@jest/globals';
 
 
 describe('js-foundation/03-callbacks.ts', () => {

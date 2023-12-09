@@ -1,6 +1,5 @@
 import { buildLogger, logger as winstonLogger } from "../../src/plugins/logger.plugin";
-
-
+import { describe, test, expect, jest } from '@jest/globals';
 
 describe('plugins/logger.plugin.ts', () => {
 

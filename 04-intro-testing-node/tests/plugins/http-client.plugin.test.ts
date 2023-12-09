@@ -1,4 +1,5 @@
 import { httpClientPlugin } from "../../src/plugins/http-client.plugin";
+import { describe, test, expect } from '@jest/globals';
 
 
 describe('plugins/http-client.plugin.ts', () => {

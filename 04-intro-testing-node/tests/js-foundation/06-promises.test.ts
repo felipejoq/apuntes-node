@@ -1,6 +1,5 @@
 import { getPokemonById } from "../../src/js-foundation/06-promises";
-
-
+import { describe, test, expect } from '@jest/globals';
 
 describe('js-foundation/06-promises.ts', () => {
 
