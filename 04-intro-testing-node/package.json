@@ -1,5 +1,5 @@
 {
-  "name": "02-bases",
+  "name": "04-intro-testing-node",
   "version": "1.0.0",
   "description": "Esta es mi primera aplicación real de Node",
   "main": "app.js",
@@ -11,7 +11,7 @@
     "build": "npm run test && rimraf ./dist && tsc",
     "start": "node dist/app.js"
   },
-  "author": "Fernando Herrera",
+  "author": "Anon",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.11",
