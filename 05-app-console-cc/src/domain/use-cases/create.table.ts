@@ -6,7 +6,7 @@ export interface CreateTableUseCase {
 
 export interface CreateTableOptions {
   table: number;
-  limit: number;
+  limit?: number;
 }
 
 export class CreateTable implements CreateTableUseCase {
@@ -16,7 +16,7 @@ export class CreateTable implements CreateTableUseCase {
      */
   ) { }
 
-  execute({ table, limit }: CreateTableOptions) {
+  execute({ table, limit = 10 }: CreateTableOptions) {
     return multiplication(table, limit);
   }
 }
