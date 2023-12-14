@@ -4,3 +4,8 @@ node_modules
 dist
 coverage
 outputs
+.DS_Store
+logs
+.env
+mongodb
+postgresdb
