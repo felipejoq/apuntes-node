@@ -3,7 +3,7 @@ import { envs } from '../../config/plugins/envs.plugin';
 import { LogModel, MongoDatabase } from '../../data/mongo';
 import { MongoLogDatasource } from './mongo-log.datasource';
 import { LogEntity, LogSeverityLevel } from '../../domain/entities/log.entity';
-
+import { describe, test, expect, jest, beforeAll } from '@jest/globals';
 
 
 describe('Pruebas en MongoLogDatasource', () => {

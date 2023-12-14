@@ -1,9 +1,6 @@
 import { LogEntity, LogSeverityLevel } from '../../domain/entities/log.entity';
 import { LogRepositoryImpl } from './log.repository.impl';
-
-
-
-
+import { describe, test, expect, jest, beforeEach} from '@jest/globals';
 
 describe('LogRepositoryImpl', () => {
 

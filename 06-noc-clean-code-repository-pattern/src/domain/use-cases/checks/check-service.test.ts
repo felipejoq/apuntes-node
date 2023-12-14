@@ -1,9 +1,9 @@
 import { LogEntity } from '../../entities/log.entity';
 import { CheckService } from './check-service';
 
+import { describe, test, expect, jest, beforeEach } from '@jest/globals';
 
-
-describe( 'CheckService UseCase', () => {
+describe('CheckService UseCase', () => {
 
   const mockRepository = {
     saveLog: jest.fn(),
@@ -13,49 +13,47 @@ describe( 'CheckService UseCase', () => {
   const successCallback = jest.fn();
   const errorCallback = jest.fn();
 
-
-
   const checkService = new CheckService(
     mockRepository,
     successCallback,
     errorCallback,
   );
 
-  beforeEach(() =>{
+  beforeEach(() => {
     jest.clearAllMocks();
   })
 
 
 
-  test( 'should call successCallback when fetch returns true', async () => {
+  test('should call successCallback when fetch returns true', async () => {
 
-    const wasOk = await checkService.execute( 'https://google.com' );
-    
-    expect( wasOk ).toBe( true );
-    expect( successCallback ).toHaveBeenCalled()
-    expect( errorCallback ).not.toHaveBeenCalled();
+    const wasOk = await checkService.execute('https://google.com');
 
-    expect( mockRepository.saveLog ).toBeCalledWith(
-      expect.any( LogEntity )
+    expect(wasOk).toBe(true);
+    expect(successCallback).toHaveBeenCalled()
+    expect(errorCallback).not.toHaveBeenCalled();
+
+    expect(mockRepository.saveLog).toBeCalledWith(
+      expect.any(LogEntity)
     );
 
-  } );
+  });
 
-  test( 'should call errorCallback when fetch returns false', async () => {
+  test('should call errorCallback when fetch returns false', async () => {
 
-    const wasOk = await checkService.execute( 'https://goasdfasdfasdfasdogle.com' );
-    
-    expect( wasOk ).toBe( false );
-    expect( successCallback ).not.toHaveBeenCalled()
-    expect( errorCallback ).toHaveBeenCalled();
+    const wasOk = await checkService.execute('https://goasdfasdfasdfasdogle.com');
 
-    expect( mockRepository.saveLog ).toBeCalledWith(
-      expect.any( LogEntity )
+    expect(wasOk).toBe(false);
+    expect(successCallback).not.toHaveBeenCalled()
+    expect(errorCallback).toHaveBeenCalled();
+
+    expect(mockRepository.saveLog).toBeCalledWith(
+      expect.any(LogEntity)
     );
 
-  } );
+  });
 
 
 
 
-} );
+});

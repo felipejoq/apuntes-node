@@ -1,6 +1,6 @@
 import { LogEntity, LogSeverityLevel } from '../entities/log.entity';
 import { LogDatasource } from './log.datasource';
-
+import { describe, test, expect } from '@jest/globals';
 
 describe('log.datasource.ts LogDatasource', ()=> {
 
@@ -22,9 +22,6 @@ describe('log.datasource.ts LogDatasource', ()=> {
 
   }
 
-
-
-
   test('should test the abstract class', async() => {
 
     const mockLogDatasource = new MockLogDatasource();
@@ -37,9 +34,5 @@ describe('log.datasource.ts LogDatasource', ()=> {
     const logs = await mockLogDatasource.getLogs( LogSeverityLevel.high );
     expect( logs ).toHaveLength(1)
     expect( logs[0]).toBeInstanceOf( LogEntity );
-
-
   })
-
-
 })

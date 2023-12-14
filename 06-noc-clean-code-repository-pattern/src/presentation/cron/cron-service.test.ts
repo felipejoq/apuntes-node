@@ -1,6 +1,6 @@
 import { CronService } from './cron-service';
 
-
+import { describe, test, expect, jest } from '@jest/globals';
 
 describe('CronService', () => {
 
@@ -9,12 +9,12 @@ describe('CronService', () => {
   //jest.clearAllMocks
 
 
-  test('should create a job',(done) => {
+  test('should create a job', (done) => {
 
-    const job = CronService.createJob('* * * * * *', mockTick );
+    const job = CronService.createJob('* * * * * *', mockTick);
 
     setTimeout(() => {
-      expect( mockTick ).toBeCalledTimes(2);
+      expect(mockTick).toBeCalledTimes(2);
       job.stop();
       done();
     }, 2000);

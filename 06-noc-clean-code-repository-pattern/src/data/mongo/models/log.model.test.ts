@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import { envs } from '../../../config/plugins/envs.plugin';
 import { MongoDatabase } from '../init';
 import { LogModel } from './log.model';
-
+import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
 
 
 describe('log.model.test.ts', () => {

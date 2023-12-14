@@ -1,11 +1,11 @@
 import { envs } from './envs.plugin';
-
+import { describe, test, expect, jest } from '@jest/globals';
 
 
 describe('envs.plugin.ts', () => {
 
-  test('should return env options', ()=> {
-    expect( envs ).toEqual({
+  test('should return env options', () => {
+    expect(envs).toEqual({
       PORT: 3000,
       MAILER_SERVICE: 'gmail',
       MAILER_EMAIL: 'felipe@goooogle.com',
@@ -21,8 +21,8 @@ describe('envs.plugin.ts', () => {
   });
 
 
-  test('should return error if not found env', async() => {
-    
+  test('should return error if not found env', async () => {
+
     jest.resetModules();
     process.env.PORT = 'ABC';
 
@@ -34,7 +34,7 @@ describe('envs.plugin.ts', () => {
     } catch (error) {
       expect(`${error}`).toContain('"PORT" should be a valid integer');
     }
-    
+
 
   })
 
