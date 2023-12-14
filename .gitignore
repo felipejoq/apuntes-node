@@ -9,3 +9,5 @@ logs
 .env
 mongodb
 postgresdb
+mongo-test
+postgres-test

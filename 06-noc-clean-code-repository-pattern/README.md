@@ -15,10 +15,9 @@ docker compose up -d
 
 5. Ejecutar el comando
 
-
-  ```bash
-  npx prisma migrate dev
-  ```
+```bash
+npx prisma migrate dev
+```
 
 6. Ejecutar ```npm run dev```
 
