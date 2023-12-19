@@ -1,11 +1,10 @@
 import mongoose, { Schema } from 'mongoose';
 
-
-const categorySchema = new mongoose.Schema( {
+const categorySchema = new mongoose.Schema({
 
   name: {
     type: String,
-    required: [ true, 'Name is required' ],
+    required: [true, 'Name is required'],
     unique: true,
   },
   available: {
@@ -18,15 +17,13 @@ const categorySchema = new mongoose.Schema( {
     ref: 'User',
     required: true
   }
-  
-
-} );
+});
 
 
 categorySchema.set('toJSON', {
   virtuals: true,
   versionKey: false,
-  transform: function( doc, ret, options ) {
+  transform: function (doc, ret, options) {
     delete ret._id;
   },
 })

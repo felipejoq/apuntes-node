@@ -6,9 +6,6 @@ import { UploadedFile } from 'express-fileupload';
 import { Uuid } from '../../config';
 import { CustomError } from '../../domain';
 
-
-
-
 export class FileUploadService {
 
 
@@ -54,8 +51,6 @@ export class FileUploadService {
 
     }
 
-
-
   }
 
   async uploadMultiple(
@@ -72,9 +67,4 @@ export class FileUploadService {
 
   }
 
-
-
-
 }
-
-
